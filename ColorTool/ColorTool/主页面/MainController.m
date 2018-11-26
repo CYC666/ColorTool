@@ -49,6 +49,10 @@
     _listCollectionView.dataSource = self;
     [self.view addSubview:_listCollectionView];
     
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
+    [_listCollectionView addGestureRecognizer:longPressGesture];
+    
+    
 }
 
 
@@ -74,7 +78,48 @@
     
 }
 
-
+#pragma mark - 长按可拖动
+- (void)longPressAction:(UILongPressGestureRecognizer *)press {
+    
+    CGPoint point = [press locationInView:_listCollectionView];
+    NSIndexPath *indexPath = [_listCollectionView indexPathForItemAtPoint:point];
+    UICollectionViewCell *cell = [_listCollectionView cellForItemAtIndexPath:indexPath];
+    
+    //根据长按手势的状态进行处理。
+    switch (press.state) {
+            case UIGestureRecognizerStateBegan:
+            //当没有点击到cell的时候不进行处理
+            if (!indexPath) {
+                break;
+            }
+            //开始移动
+            cell.transform = CGAffineTransformMakeScale(1.1, 1.1);
+            [_listCollectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+            break;
+            
+            
+            case UIGestureRecognizerStateChanged:
+            //移动过程中更新位置坐标
+            cell.transform = CGAffineTransformMakeScale(1.1, 1.1);
+            [_listCollectionView updateInteractiveMovementTargetPosition:point];
+            break;
+            
+            
+            case UIGestureRecognizerStateEnded:
+            //停止移动调用此方法
+            cell.transform = CGAffineTransformMakeScale(1, 1);
+            [_listCollectionView endInteractiveMovement];
+            break;
+            
+            
+        default:
+            //取消移动
+            cell.transform = CGAffineTransformMakeScale(1, 1);
+            [_listCollectionView cancelInteractiveMovement];
+            break;
+    }
+    
+}
 
 #pragma mark ========================================网络请求=============================================
 
@@ -103,16 +148,36 @@
     
 }
 
+- (BOOL)beginInteractiveMovementForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
 
+- (void)updateInteractiveMovementTargetPosition:(CGPoint)targetPosition {
+    
+    
+    
+}
 
+- (void)endInteractiveMovement {
+    
+}
 
+- (void)cancelInteractiveMovement {
+    
+}
 
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
 
-
-
-
-
-
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath
+           toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+    [dataArray removeObjectAtIndex:sourceIndexPath.row];
+    [dataArray insertObject:@"" atIndex:destinationIndexPath.row];
+    
+    
+}
 
 
 
