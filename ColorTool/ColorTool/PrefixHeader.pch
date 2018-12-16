@@ -11,7 +11,8 @@
 
 #ifdef __OBJC__
 
-
+#import "CYC666.h"
+#import "SVProgressHUD.h"
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
@@ -24,7 +25,15 @@
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
+//----------------------颜色----------------------------
+#define CRGB(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 
+//弹出提示
+#define SVP_STATUS(msg) [SVProgressHUD showWithStatus:msg];[SVProgressHUD dismissWithDelay:1.5];
+#define SVP_ERROR(msg) [SVProgressHUD showErrorWithStatus:msg];[SVProgressHUD dismissWithDelay:1.5];
+#define SVP_SUCCESS(msg) [SVProgressHUD showSuccessWithStatus:msg];[SVProgressHUD dismissWithDelay:1.5];
+#define SVP_INFO(msg) [SVProgressHUD showSuccessWithStatus:msg];[SVProgressHUD dismissWithDelay:1.5];
+#define SVP_DISMISS [SVProgressHUD dismiss];
 
 
 #endif /* PrefixHeader_pch */

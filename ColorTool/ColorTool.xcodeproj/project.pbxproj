@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1721F78421C5F96D00F031B8 /* SelectColorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1721F78221C5F96D00F031B8 /* SelectColorController.m */; };
+		1721F78521C5F96D00F031B8 /* SelectColorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1721F78321C5F96D00F031B8 /* SelectColorController.xib */; };
+		1721F78821C6252D00F031B8 /* CYC666.m in Sources */ = {isa = PBXBuildFile; fileRef = 1721F78721C6252D00F031B8 /* CYC666.m */; };
+		1721F79421C625F800F031B8 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1721F78A21C625F800F031B8 /* SVRadialGradientLayer.m */; };
+		1721F79521C625F800F031B8 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1721F78D21C625F800F031B8 /* SVProgressAnimatedView.m */; };
+		1721F79621C625F800F031B8 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1721F79021C625F800F031B8 /* SVProgressHUD.m */; };
+		1721F79721C625F800F031B8 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1721F79121C625F800F031B8 /* SVIndefiniteAnimatedView.m */; };
+		1721F79821C625F800F031B8 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1721F79221C625F800F031B8 /* SVProgressHUD.bundle */; };
 		17A27F1021A9948600CC8F07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A27F0F21A9948600CC8F07 /* AppDelegate.m */; };
 		17A27F1321A9948600CC8F07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A27F1221A9948600CC8F07 /* ViewController.m */; };
 		17A27F1621A9948600CC8F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A27F1421A9948600CC8F07 /* Main.storyboard */; };
@@ -22,6 +30,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1721F78121C5F96D00F031B8 /* SelectColorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectColorController.h; sourceTree = "<group>"; };
+		1721F78221C5F96D00F031B8 /* SelectColorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectColorController.m; sourceTree = "<group>"; };
+		1721F78321C5F96D00F031B8 /* SelectColorController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectColorController.xib; sourceTree = "<group>"; };
+		1721F78621C6252D00F031B8 /* CYC666.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYC666.h; sourceTree = "<group>"; };
+		1721F78721C6252D00F031B8 /* CYC666.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYC666.m; sourceTree = "<group>"; };
+		1721F78A21C625F800F031B8 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		1721F78B21C625F800F031B8 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		1721F78C21C625F800F031B8 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		1721F78D21C625F800F031B8 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		1721F78E21C625F800F031B8 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		1721F78F21C625F800F031B8 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		1721F79021C625F800F031B8 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		1721F79121C625F800F031B8 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		1721F79221C625F800F031B8 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		1721F79321C625F800F031B8 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		17A27F0B21A9948600CC8F07 /* ColorTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A27F0E21A9948600CC8F07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17A27F0F21A9948600CC8F07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +79,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1721F78021C5F94F00F031B8 /* 取色 */ = {
+			isa = PBXGroup;
+			children = (
+				1721F78121C5F96D00F031B8 /* SelectColorController.h */,
+				1721F78221C5F96D00F031B8 /* SelectColorController.m */,
+				1721F78321C5F96D00F031B8 /* SelectColorController.xib */,
+			);
+			path = "取色";
+			sourceTree = "<group>";
+		};
+		1721F78921C625F800F031B8 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1721F78A21C625F800F031B8 /* SVRadialGradientLayer.m */,
+				1721F78B21C625F800F031B8 /* SVIndefiniteAnimatedView.h */,
+				1721F78C21C625F800F031B8 /* SVProgressHUD.h */,
+				1721F78D21C625F800F031B8 /* SVProgressAnimatedView.m */,
+				1721F78E21C625F800F031B8 /* SVProgressHUD-Prefix.pch */,
+				1721F78F21C625F800F031B8 /* SVRadialGradientLayer.h */,
+				1721F79021C625F800F031B8 /* SVProgressHUD.m */,
+				1721F79121C625F800F031B8 /* SVIndefiniteAnimatedView.m */,
+				1721F79221C625F800F031B8 /* SVProgressHUD.bundle */,
+				1721F79321C625F800F031B8 /* SVProgressAnimatedView.h */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		17A27F0221A9948600CC8F07 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +150,7 @@
 				17A27F9921AC155D00CC8F07 /* MainCell.h */,
 				17A27F9A21AC155D00CC8F07 /* MainCell.m */,
 				17A27F9B21AC155D00CC8F07 /* MainCell.xib */,
+				1721F78021C5F94F00F031B8 /* 取色 */,
 			);
 			path = "主页面";
 			sourceTree = "<group>";
@@ -117,6 +168,9 @@
 		17A27F2E21A998AE00CC8F07 /* 基础控件 */ = {
 			isa = PBXGroup;
 			children = (
+				1721F78921C625F800F031B8 /* SVProgressHUD */,
+				1721F78621C6252D00F031B8 /* CYC666.h */,
+				1721F78721C6252D00F031B8 /* CYC666.m */,
 				17A27F2F21A998C300CC8F07 /* BaseController.h */,
 				17A27F3021A998C300CC8F07 /* BaseController.m */,
 			);
@@ -180,9 +234,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1721F79821C625F800F031B8 /* SVProgressHUD.bundle in Resources */,
 				17A27F1B21A9948800CC8F07 /* LaunchScreen.storyboard in Resources */,
 				17A27F1821A9948800CC8F07 /* Assets.xcassets in Resources */,
 				17A27F2D21A997DB00CC8F07 /* MoreController.xib in Resources */,
+				1721F78521C5F96D00F031B8 /* SelectColorController.xib in Resources */,
 				17A27F1621A9948600CC8F07 /* Main.storyboard in Resources */,
 				17A27F9D21AC155D00CC8F07 /* MainCell.xib in Resources */,
 			);
@@ -196,12 +252,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A27F2C21A997DB00CC8F07 /* MoreController.m in Sources */,
+				1721F79721C625F800F031B8 /* SVIndefiniteAnimatedView.m in Sources */,
 				17A27F2721A997BB00CC8F07 /* MainController.m in Sources */,
+				1721F79521C625F800F031B8 /* SVProgressAnimatedView.m in Sources */,
 				17A27F1321A9948600CC8F07 /* ViewController.m in Sources */,
 				17A27F1E21A9948800CC8F07 /* main.m in Sources */,
+				1721F79621C625F800F031B8 /* SVProgressHUD.m in Sources */,
 				17A27F9C21AC155D00CC8F07 /* MainCell.m in Sources */,
+				1721F78821C6252D00F031B8 /* CYC666.m in Sources */,
+				1721F78421C5F96D00F031B8 /* SelectColorController.m in Sources */,
 				17A27F3121A998C300CC8F07 /* BaseController.m in Sources */,
 				17A27F1021A9948600CC8F07 /* AppDelegate.m in Sources */,
+				1721F79421C625F800F031B8 /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +409,7 @@
 				DEVELOPMENT_TEAM = WU3DD344F3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ColorTool/PrefixHeader.pch";
 				INFOPLIST_FILE = ColorTool/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +430,7 @@
 				DEVELOPMENT_TEAM = WU3DD344F3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ColorTool/PrefixHeader.pch";
 				INFOPLIST_FILE = ColorTool/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
