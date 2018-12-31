@@ -17,6 +17,7 @@
                 <outlet property="fieldR" destination="yf5-vm-MST" id="aGG-dC-GF3"/>
                 <outlet property="icon" destination="89j-tu-Y22" id="1fJ-eC-rch"/>
                 <outlet property="showColorView" destination="0Ry-8M-QOZ" id="jdX-Nc-oFJ"/>
+                <outlet property="showIcon" destination="8KN-rf-Mov" id="5gv-dg-M5B"/>
                 <outlet property="sliderA" destination="whD-ac-M5h" id="hf4-xj-Y8B"/>
                 <outlet property="sliderB" destination="p0N-Yq-oLZ" id="4IY-36-Tsf"/>
                 <outlet property="sliderG" destination="gXQ-np-f3B" id="bEy-5r-d2U"/>
@@ -36,13 +37,46 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024" translatesAutoresizingMaskIntoConstraints="NO" id="89j-tu-Y22">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="346"/>
                         </imageView>
+                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iS6-ew-YL4">
+                            <rect key="frame" x="315" y="10" width="50" height="50"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024" translatesAutoresizingMaskIntoConstraints="NO" id="8KN-rf-Mov">
+                                    <rect key="frame" x="-162.5" y="-148" width="375" height="346"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="探头" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-M7-iKF">
+                                    <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="ZhX-2Q-55q"/>
+                                        <constraint firstAttribute="width" constant="20" id="dqD-Zb-5Pj"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="8KN-rf-Mov" firstAttribute="centerY" secondItem="iS6-ew-YL4" secondAttribute="centerY" id="6Mk-SR-CBa"/>
+                                <constraint firstAttribute="width" constant="50" id="L9l-8A-1yx"/>
+                                <constraint firstAttribute="height" constant="50" id="hXD-jH-5rB"/>
+                                <constraint firstItem="8KN-rf-Mov" firstAttribute="centerX" secondItem="iS6-ew-YL4" secondAttribute="centerX" id="l9d-Mw-RyI"/>
+                                <constraint firstItem="q1Z-M7-iKF" firstAttribute="centerY" secondItem="iS6-ew-YL4" secondAttribute="centerY" id="qDD-UD-vex"/>
+                                <constraint firstItem="q1Z-M7-iKF" firstAttribute="centerX" secondItem="iS6-ew-YL4" secondAttribute="centerX" id="tzp-S8-FIi"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="89j-tu-Y22" firstAttribute="top" secondItem="nJW-CU-YW1" secondAttribute="top" id="1gl-BJ-srp"/>
+                        <constraint firstItem="8KN-rf-Mov" firstAttribute="height" secondItem="89j-tu-Y22" secondAttribute="height" id="7RM-y1-6Gs"/>
                         <constraint firstAttribute="trailing" secondItem="89j-tu-Y22" secondAttribute="trailing" id="CDI-hs-fNu"/>
+                        <constraint firstAttribute="trailing" secondItem="iS6-ew-YL4" secondAttribute="trailing" constant="10" id="CO3-K1-ZBy"/>
                         <constraint firstAttribute="bottom" secondItem="89j-tu-Y22" secondAttribute="bottom" id="OKS-DV-r0N"/>
                         <constraint firstItem="89j-tu-Y22" firstAttribute="leading" secondItem="nJW-CU-YW1" secondAttribute="leading" id="YzE-jp-itr"/>
+                        <constraint firstItem="iS6-ew-YL4" firstAttribute="top" secondItem="nJW-CU-YW1" secondAttribute="top" constant="10" id="ZO7-PV-FQ7"/>
+                        <constraint firstItem="8KN-rf-Mov" firstAttribute="width" secondItem="89j-tu-Y22" secondAttribute="width" id="z30-Ra-H5m"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3US-NG-OQm">
@@ -337,5 +371,6 @@
     </objects>
     <resources>
         <image name="1024" width="512" height="512"/>
+        <image name="探头" width="40" height="40"/>
     </resources>
 </document>

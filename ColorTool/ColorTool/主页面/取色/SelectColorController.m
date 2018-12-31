@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
+@property (weak, nonatomic) IBOutlet UIImageView *showIcon;
+
 
 @property (weak, nonatomic) IBOutlet UIView *showColorView;
 
@@ -38,6 +40,7 @@
     [super viewDidLoad];
     
     self.title = @"取色";
+    self.showIcon.superview.alpha = 0;    // 先不显示
     
     
     // 导航栏右边的添加按钮
@@ -120,12 +123,16 @@
     
 }
 
-#pragma mark - 长按图片，拾取颜色
+#pragma mark - 长按图片
 - (void)longPressAction:(UILongPressGestureRecognizer *)press {
     
     CGPoint point = [press locationInView:self.icon];
 
+    // 拾取颜色
     [self colorAtPixel:point];
+    
+    // 右上角的预览
+    [self setShowIconAction:press];
     
 }
 
@@ -248,6 +255,53 @@
     self.sliderG.value = g;
     self.sliderB.value = b;
     self.sliderA.value = 255;
+    
+    if (r > 125 && g > 125 && b > 125) {
+        self.fieldR.textColor = [UIColor darkGrayColor];
+        self.fieldG.textColor = [UIColor darkGrayColor];
+        self.fieldB.textColor = [UIColor darkGrayColor];
+        self.fieldA.textColor = [UIColor darkGrayColor];
+    } else {
+        self.fieldR.textColor = [UIColor whiteColor];
+        self.fieldG.textColor = [UIColor whiteColor];
+        self.fieldB.textColor = [UIColor whiteColor];
+        self.fieldA.textColor = [UIColor whiteColor];
+    }
+    
+}
+
+#pragma mark - 设置右上角的预览显示
+- (void)setShowIconAction:(UILongPressGestureRecognizer *)press {
+    
+    
+    
+    // 控制显示区域 50*50
+    // 触点位置放在中间显示
+    CGPoint point = [press locationInView:self.icon];
+    float width = self.icon.bounds.size.width;
+    float height = self.icon.bounds.size.height;
+    
+    float distanceX = point.x - width * 0.5;
+    float distanceY = point.y - height * 0.5;
+    
+    self.showIcon.transform = CGAffineTransformMakeTranslation(-distanceX, -distanceY);
+    
+    
+    // 控制显示
+    [UIView animateWithDuration:.35 animations:^{
+        
+        if (press.state == UIGestureRecognizerStateBegan || press.state == UIGestureRecognizerStateChanged) {
+            
+            // 显示
+            self.showIcon.superview.alpha = 1;
+            
+        } else {
+            
+            // 隐藏
+            self.showIcon.superview.alpha = 0;
+        }
+        
+    }];
     
 }
 
